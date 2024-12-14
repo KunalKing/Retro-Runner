@@ -1,5 +1,7 @@
 import k from "./kaplayCtx";
 import mainMenu from "./scenes/mainMenu";
+import game from "./scenes/game";
+
 k.loadSprite("chemical-bg", "graphics/chemical-bg.png");
 k.loadSprite("platforms", "graphics/platforms.png");
 k.loadSprite("sonic", "graphics/sonic.png",{
@@ -7,7 +9,7 @@ k.loadSprite("sonic", "graphics/sonic.png",{
     sliceY: 2,
     anims:{
       run: {from: 0, to: 7, loop: true, speed: 30},  
-      run: {from: 8, to: 15, loop: true, speed: 100},  
+      // run: {from: 8, to: 15, loop: true, speed: 100},   
     },
 });
 k.loadSprite("ring", "graphics/ring.png",{
@@ -32,6 +34,6 @@ k.loadSound("ring", "sounds/ring.wav");
 k.loadSound("city", "sounds/city.wav");
 
 k.scene("main-menu", mainMenu);
-k.scene("game", () => {});
+k.scene("game", game);
 k.scene("gameover", () => {});
 k.go("main-menu");
