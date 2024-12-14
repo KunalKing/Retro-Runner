@@ -9,7 +9,7 @@ k.loadSprite("sonic", "graphics/sonic.png",{
     sliceY: 2,
     anims:{
       run: {from: 0, to: 7, loop: true, speed: 30},  
-      // run: {from: 8, to: 15, loop: true, speed: 100},   
+      jump: {from: 8, to: 15, loop: true, speed: 100},   
     },
 });
 k.loadSprite("ring", "graphics/ring.png",{
