@@ -1,6 +1,7 @@
 import k from "./kaplayCtx";
 import mainMenu from "./scenes/mainMenu";
 import game from "./scenes/game";
+import gameOver from "./scenes/gameover";
 
 k.loadSprite("chemical-bg", "graphics/chemical-bg.png");
 k.loadSprite("platforms", "graphics/platforms.png");
@@ -31,10 +32,10 @@ k.loadSound("destroy", "sounds/destroy.wav");
 k.loadSound("hyper-ring", "sounds/hyper-ring.wav");
 k.loadSound("jump", "sounds/jump.wav");
 k.loadSound("ring", "sounds/ring.wav");
-k.loadSound("city", "sounds/city.wav");
+k.loadSound("city", "sounds/city.mp3");
 k.loadSound("hurt", "sounds/hurt.wav");
 
 k.scene("main-menu", mainMenu);
 k.scene("game", game);
-k.scene("gameover", () => {});
+k.scene("gameover", gameOver);
 k.go("main-menu");
